@@ -14,6 +14,8 @@ spec:
       labels:
         app: nfs-client-provisioner
     spec:
+      securityContext:
+        runAsNonRoot: true
       serviceAccountName: nfs-client-provisioner
       containers:
         - name: nfs-client-provisioner

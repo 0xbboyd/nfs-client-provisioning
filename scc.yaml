@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: SecurityContextConstraints
+metadata:
+  annotations: null
+  name: nfs-provisioner
 allowHostDirVolumePlugin: true
 allowHostIPC: false
 allowHostNetwork: false
@@ -7,14 +12,9 @@ allowPrivilegedContainer: false
 allowedCapabilities:
 - DAC_READ_SEARCH
 - SYS_RESOURCE
-apiVersion: v1
 defaultAddCapabilities: null
 fsGroup:
   type: MustRunAs
-kind: SecurityContextConstraints
-metadata:
-  annotations: null
-  name: nfs-provisioner
 priority: null
 readOnlyRootFilesystem: false
 requiredDropCapabilities:

@@ -27,11 +27,11 @@ spec:
             - name: PROVISIONER_NAME
               value: nfs-client-provisioner
             - name: NFS_SERVER
-              value: 192.168.1.157
+              value: 10.0.0.100
             - name: NFS_PATH
               value: /var/nfsshare
       volumes:
         - name: nfs-client-root
           nfs:
-            server: 192.168.1.157
+            server: 10.0.0.100
             path: /var/nfsshare
